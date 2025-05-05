@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>个人展示页面</title>
+	
+	<link rel="stylesheet" href="./css/css3.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- 左侧导航栏 -->
+        <div class="left-sidebar">
+            <img src="./images/u=3033030059,4193153630&fm=253&fmt=auto&app=120&f=JPEG.webp" alt="头像" class="avatar">
+            <h1>Venette</h1>
+            <ul class="navigation">
+				<!-- 新增：为第一个导航项添加 active 类，表示初始激活状态 -->
+				<!-- 新增：添加 data-target 属性，用于关联对应的内容区域 -->
+                <li><a href="#" data-target="section1" class="active">个人介绍</a></li>
+                <li><a href="#" data-target="section2">个人展示</a></li>
+                <li><a href="#" data-target="section3">我的动态</a></li>
+                <li><a href="#" data-target="section4">联系我们</a></li>
+            </ul>
+			<!-- 音乐播放器 -->
+			<div class="player">
+			       <!-- 音乐插图 -->
+			       <section class="img">
+			           <img id="bg-img" src="" alt="">
+			       </section>
+				
+			       <!-- 信息 -->
+			       <section class="info">
+			           <!-- 进度栏 -->
+			           <div class="progress">
+			               <div id="start">0:00</div>
+			               <div id="bar"></div>
+			               <div id="end">3:15</div>
+			           </div>
+			           <!-- 歌曲信息 -->
+			           <div class="song-detail">
+			               <span id="title"></span>
+			               <span id="author"></span>
+			           </div>
+			           <!-- 按钮区域 -->
+			           <div id="controls" class="controls">
+						<span><i class=""><img src="./images/音乐控件图片/音乐播放器音乐列表控件.png" alt="" width="10px" height="10px"/></i></span>
+						<div class="play">
+							<span><i id="voice"><img src="./images/音乐控件图片/音乐播放器声音控件.png" alt="" width="10px" height="10px"/></i></span>
+			           		<span><i id="pre"><img src="./images/音乐控件图片/音乐播放器下一首控件.png" alt="" width="10px" height="10px"/></i></span>
+			           		<span><i id="play"><img src="./images/音乐控件图片/音乐播放器暂停控件.png" alt="" width="10px" height="10px"/></i></span>
+			           		<span><i id="next"><img src="./images/音乐控件图片/音乐播放器上一首控件.png" alt="" width="10px" height="10px"/></i></span>
+			           		<span><i id="mode"><img src="./images/音乐控件图片/随机播放控件.png" alt="" width="10px" height="10px"/></i></span>
+			           	</div>
+			           	<span><i id="add"><img src="./images/音乐控件图片/新增控件.png" alt=""  width="10px" height="10px"/></i></span>
+			        </div>
+			       </section>
+				
+			       <!-- audio标签 -->
+			       <section class="audio">
+			           <audio id="audio" controls src="">
+			           </audio>
+			       </section>
+			   </div>
+        </div>
+        <!-- 右侧主要内容区 -->
+        <div class="main-content">
+        <!-- 新增：为第一个内容区域添加 active 类，表示初始显示 -->
+        <div class="content-section active" id="section1">
+            <div class="header">
+                <h2>个人介绍</h2>
+            </div>
+            <div class="profile">
+				<img src="./images/u=3033030059,4193153630&fm=253&fmt=auto&app=120&f=JPEG.webp" alt="头像" class="avatars">
+				<div class="profile-info">
+					<h1>Venette</h1>
+					<p>男 | 18岁 | 金牛座</p>
+					<p>来自浙江-杭州</p>
+				</div>
+				<div class="zan">
+					<i class="fa fa-thumbs-up" style="color: #ff69b4;"></i> <span>0</span>
+				</div>
+			</div>
+			<div id="qoute">
+				<span id="typed">
+					
+				</span>
+			</div>
+			<div class="content">
+				<div class="about-me">
+					<h2>关于我</h2>
+					<br />
+					<p>我是杭州中策职业学校钱塘学校大数据技术与应用五年班的高三学生，即将开启在杭州职业技术学院的大学学习之旅。</p>
+					<p>在专业技术方面，我打下了较为坚实的基础。掌握了 web 前端开发技能，能够实现网页的布局与交互设计；精通 java 和 python 编程，可运用这两种语言完成各类程序的编写与功能实现；具备数据分析能力，能对数据进行清洗、处理和分析，从中提取有价值的信息；熟悉数据库操作，可进行数据库的设计、管理与维护；还熟练掌握 ps、pr 等软件，能完成图片处理和视频剪辑工作；对 Vb 也有一定的了解和运用能力。</p>
+					<p>在个人品质方面，我执行力强，对于布置的任务能够迅速且高质量地完成；责任感高，对待每一项工作都认真负责，尽力做到最好；集体感强，始终将集体利益放在首位，积极为集体贡献自己的力量；敢于担当，在面对问题和挑战时，不推诿、不逃避，勇于承担责任。</p>
+					<p>在日常生活中，我热爱健身和打羽毛球，通过运动不仅强健了体魄，还培养了坚韧不拔的意志和团队协作精神。同时，我喜欢记录自己的生活，用文字、照片或视频的方式留存生活中的美好瞬间，这让我更加热爱生活，也培养了我善于观察和发现美的眼睛。</p>
+				
+				</div>
+				<div class="skills">
+					<h2>技能</h2>
+					<div class="jineng">
+						<div class="skill-item">
+							<span class="skill-name">web前端</span>
+							<span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">☆</span><span class="star">☆</span>
+						</div>
+						<div class="skill-item">
+							<span class="skill-name">java</span>
+							<span class="star">★</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span>
+						</div>
+						<div class="skill-item">
+							<span class="skill-name">python</span>
+							<span class="star">★</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span>
+						</div>
+						<div class="skill-item">
+							<span class="skill-name">数据分析</span>
+							<span class="star">★</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span>
+						</div>
+						<div class="skill-item">
+							<span class="skill-name">数据库</span>
+							<span class="star">★</span><span class="star">★</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span>
+						</div>
+						<div class="skill-item">
+							<span class="skill-name">ps</span>
+							<span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">☆</span>
+						</div>
+						<div class="skill-item">
+							<span class="skill-name">pr</span>
+							<span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">☆</span>
+						</div>
+						<div class="skill-item">
+							<span class="skill-name">vb</span>
+							<span class="star">★</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span>
+						</div>
+						<div class="skill-item">
+							<span class="skill-name">健身</span>
+							<span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">☆</span>
+						</div>
+						<div class="skill-item">
+							<span class="skill-name">羽毛球</span>
+							<span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">☆</span><span class="star">☆</span>
+						</div>
+						<div class="skill-item">
+							<span class="skill-name">拍摄</span>
+							<span class="star">★</span><span class="star">★</span><span class="star">☆	</span><span class="star">☆</span><span class="star">☆</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		</div>
+		<div class="content-section" id="section2">
+			<div class="header">
+				<h2>个人展示</h2>
+			</div>
+			<nav class="nav-bar">
+				<ul>
+					<li class="nav-item actives" data-target="skill">技能</li>
+					<li class="nav-item" data-target="daily">日常</li>
+					<li class="nav-item" data-target="fitness">健身</li>
+					<li class="nav-item" data-target="game">游戏</li>
+				</ul>
+				<div class="blue-mark" id="blue-mark"></div>
+			</nav>
+			<div class="content">
+				<div id="skill" class="content-sections actives">
+					<img src="./images/神奇图片/368602dcd8fd9c8ad230011b9ce534f3.jpg" alt=""  class="skill-image"/>
+					<p>主包<span style="font-size: 40px; color: red;">暂时</span>啥也没写~</p>
+				</div>
+				<div id="daily" class="content-sections">
+					<div class="photo-display-container">
+						 <main class="main">
+							<div class="image-grid">
+								<div class="image-card">
+									<img src="./images/日常/1.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/2.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/3.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/4.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/5.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/6.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/7.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/8.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/9.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/10.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/11.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/12.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/13.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/14.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/15.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/16.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/17.jpg" alt="示例照片 1">
+								</div>
+								<div class="image-card">
+									<img src="./images/日常/19.jpg" alt="示例照片 1">
+								</div>
+							</div>
+						</main>
+					</div>
+			</div>
+			<div id="fitness" class="content-sections">
+				<div class="photo-display-container">
+					<main class="main">
+						<div class="image-grid">
+							<div class="image-card">
+								<img src="./images/健身/1.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/健身/2.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/健身/3.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/健身/4.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/健身/5.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/健身/6.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/健身/7.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/健身/8.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/健身/9.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/健身/10.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/健身/11.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/健身/12.jpg" alt="示例照片 1">
+							</div>
+							
+						</div>
+					</main>
+				</div>
+			</div>
+			<div id="game" class="content-sections">
+				 <div class="game-container">
+					 <div class="icon-container">
+						 <img id="game-icon-1" src="./images/游戏图标/8423e9c0e78b3df4e940652d3135be7b.jpeg" alt="游戏图标 1" class="game-icon">
+						 <img id="game-icon-2" src="./images/游戏图标/b489e2b5fa3abec0e27de2dda3ae7c9b.png" class="game-icon">
+						 <img id="game-icon-3" src="./images/游戏图标/屏幕截图 2025-05-03 101350.jpg" alt="游戏图标 3" class="game-icon">
+						 <img id="game-icon-4" src="./images/游戏图标/6b95327ddc3466164969e5903fdba409.jpg" alt="游戏图标 4" class="game-icon">
+					 </div>
+					 <div class="intro-container">
+						 <div id="intro-box-1" class="intro-box slide-up">
+							 <h2 class="text-lg font-semibold">原神</h2>
+							 <p class="text-gray-600">昵称：<br />ID：<br />敬请期待······</p>
+						 </div>
+						 <div id="intro-box-2" class="intro-box slide-down">
+							 <h2 class="text-lg font-semibold">永劫无间</h2>
+							 <p class="text-gray-600">昵称：<br />单排排位：<br />敬请期待······</p>
+						 </div>
+						 <div id="intro-box-3" class="intro-box slide-down">
+							 <h2 class="text-lg font-semibold">都市天际线</h2>
+							 <p class="text-gray-600">敬请期待······</p>
+						 </div>
+						 <div id="intro-box-4" class="intro-box slide-down">
+							 <h2 class="text-lg font-semibold">PUBG</h2>
+							 <p class="text-gray-600">敬请期待······</p>
+						 </div>
+					 </div>
+				</div>
+				<div class="photo-display-container" style="margin-top: 200px;">
+					<main class="main">
+						 <div class="image-grid">
+							 <div class="image-card">
+								 <img src="./images/游戏图片/1.png" alt="示例照片 1">
+							 </div>
+							 <div class="image-card">
+								 <img src="./images/游戏图片/2.jpg" alt="示例照片 1">
+							 </div>
+							<div class="image-card">
+								<img src="./images/游戏图片/3.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/游戏图片/4.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/游戏图片/5.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/游戏图片/6.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/游戏图片/7.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/游戏图片/8.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/游戏图片/9.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/游戏图片/10.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/游戏图片/11.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/游戏图片/12.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/游戏图片/13.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/游戏图片/14.jpg" alt="示例照片 1">
+							</div>
+							<div class="image-card">
+								<img src="./images/游戏图片/15.jpg" alt="示例照片 1">
+							</div>
+						 </div>
+					</main>
+				</div>
+			</div>
+		
+		</div>
+    </div>
+		<div class="content-section" id="section3">
+			<div class="header">
+				<h2>我的动态</h2>
+				
+			</div>
+			<div class="post-list">
+				<!-- 动态项 -->
+				<div class="post-item">
+				    <div class="post-header">
+				        <img src="./images/u=3033030059,4193153630&fm=253&fmt=auto&app=120&f=JPEG.webp" alt="头像" class="post-avatar">
+				        <div class="post-content">
+				            <div class="post-user-info">
+				                <h2 class="post-user-name">Venette</h2>
+				                <span class="post-time">2小时前</span>
+				            </div>
+				            <p class="post-text">修罗easy</p>
+				            <div class="post-images">
+				                <img src="./images/游戏图片/1.png" alt="动态图片">
+				            </div>
+				            <div class="post-actions">
+				                <div class="post-action like-btn" onclick="toggleLike(this)">
+				                    <i class="fa-regular fa-thumbs-up post-action-icon"></i>
+				                    <span class="post-action-text">点赞 <span class="like-count">0</span></span>
+				                </div>
+				                <div class="post-action comment-btn" onclick="toggleCommentBox(this)">
+				                    <i class="fa-regular fa-comment post-action-icon"></i>
+				                    <span class="post-action-text">评论</span>
+				                </div>
+				                <div class="post-action">
+				                    <i class="fa-solid fa-share post-action-icon"></i>
+				                    <span class="post-action-text">分享</span>
+				                </div>
+				            </div>
+				            <div class="comment-box">
+				                <input type="text" placeholder="写下你的评论" class="comment-input">
+				                <button class="comment-submit" onclick="submitComment(this)">提交评论</button>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+			    <!-- 动态项 -->
+			    <div class="post-item">
+			        <div class="post-header">
+			            <img src="./images/u=3033030059,4193153630&fm=253&fmt=auto&app=120&f=JPEG.webp" alt="头像" class="post-avatar">
+			            <div class="post-content">
+			                <div class="post-user-info">
+			                    <h2 class="post-user-name">Venette</h2>
+			                    <span class="post-time">2小时前</span>
+			                </div>
+			                <p class="post-text">健身完了，开吃开吃</p>
+			                <div class="post-images">
+			                    <img src="./images/健身/5.jpg" alt="动态图片">
+			                </div>
+			                <div class="post-actions">
+			                    <div class="post-action like-btn" onclick="toggleLike(this)">
+			                        <i class="fa-regular fa-thumbs-up post-action-icon"></i>
+			                        <span class="post-action-text">点赞 <span class="like-count">0</span></span>
+			                    </div>
+			                    <div class="post-action comment-btn" onclick="toggleCommentBox(this)">
+			                        <i class="fa-regular fa-comment post-action-icon"></i>
+			                        <span class="post-action-text">评论</span>
+			                    </div>
+			                    <div class="post-action">
+			                        <i class="fa-solid fa-share post-action-icon"></i>
+			                        <span class="post-action-text">分享</span>
+			                    </div>
+			                </div>
+			                <div class="comment-box">
+			                    <input type="text" placeholder="写下你的评论" class="comment-input">
+			                    <button class="comment-submit" onclick="submitComment(this)">提交评论</button>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			
+			    <!-- 动态项 -->
+			    <div class="post-item">
+			        <div class="post-header">
+			            <img src="./images/u=3033030059,4193153630&fm=253&fmt=auto&app=120&f=JPEG.webp" alt="头像" class="post-avatar">
+			            <div class="post-content">
+			                <div class="post-user-info">
+			                    <h2 class="post-user-name">Venette</h2>
+			                    <span class="post-time">3小时前</span>
+			                </div>
+			                <p class="post-text">easy!!!</p>
+			                <div class="post-images grid">
+			                    <img src="./images/游戏图片/6.jpg" alt=""/>
+			                </div>
+			                <div class="post-actions">
+			                    <div class="post-action like-btn" onclick="toggleLike(this)">
+			                        <i class="fa-regular fa-thumbs-up post-action-icon"></i>
+			                        <span class="post-action-text">点赞 <span class="like-count">0</span></span>
+			                    </div>
+			                    <div class="post-action comment-btn" onclick="toggleCommentBox(this)">
+			                        <i class="fa-regular fa-comment post-action-icon"></i>
+			                        <span class="post-action-text">评论</span>
+			                    </div>
+			                    <div class="post-action">
+			                        <i class="fa-solid fa-share post-action-icon"></i>
+			                        <span class="post-action-text">分享</span>
+			                    </div>
+			                </div>
+			                <div class="comment-box">
+			                    <input type="text" placeholder="写下你的评论" class="comment-input">
+			                    <button class="comment-submit" onclick="submitComment(this)">提交评论</button>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+				<div class="post-item">
+				    <div class="post-header">
+				        <img src="./images/u=3033030059,4193153630&fm=253&fmt=auto&app=120&f=JPEG.webp" alt="头像" class="post-avatar">
+				        <div class="post-content">
+				            <div class="post-user-info">
+				                <h2 class="post-user-name">Venette</h2>
+				                <span class="post-time">3小时前</span>
+				            </div>
+				            <p class="post-text">easy*1</p>
+				            <div class="post-images grid">
+				                <img src="./images/游戏图片/6.jpg" alt=""/>
+				            </div>
+				            <div class="post-actions">
+				                <div class="post-action like-btn" onclick="toggleLike(this)">
+				                    <i class="fa-regular fa-thumbs-up post-action-icon"></i>
+				                    <span class="post-action-text">点赞 <span class="like-count">0</span></span>
+				                </div>
+				                <div class="post-action comment-btn" onclick="toggleCommentBox(this)">
+				                    <i class="fa-regular fa-comment post-action-icon"></i>
+				                    <span class="post-action-text">评论</span>
+				                </div>
+				                <div class="post-action">
+				                    <i class="fa-solid fa-share post-action-icon"></i>
+				                    <span class="post-action-text">分享</span>
+				                </div>
+				            </div>
+				            <div class="comment-box">
+				                <input type="text" placeholder="写下你的评论" class="comment-input">
+				                <button class="comment-submit" onclick="submitComment(this)">提交评论</button>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+				<div class="post-item">
+				    <div class="post-header">
+				        <img src="./images/u=3033030059,4193153630&fm=253&fmt=auto&app=120&f=JPEG.webp" alt="头像" class="post-avatar">
+				        <div class="post-content">
+				            <div class="post-user-info">
+				                <h2 class="post-user-name">Venette</h2>
+				                <span class="post-time">3小时前</span>
+				            </div>
+				            <p class="post-text">easy*2</p>
+				            <div class="post-images grid">
+								<img src="./images/游戏图片/12.jpg" alt="" />
+				            </div>
+				            <div class="post-actions">
+				                <div class="post-action like-btn" onclick="toggleLike(this)">
+				                    <i class="fa-regular fa-thumbs-up post-action-icon"></i>
+				                    <span class="post-action-text">点赞 <span class="like-count">0</span></span>
+				                </div>
+				                <div class="post-action comment-btn" onclick="toggleCommentBox(this)">
+				                    <i class="fa-regular fa-comment post-action-icon"></i>
+				                    <span class="post-action-text">评论</span>
+				                </div>
+				                <div class="post-action">
+				                    <i class="fa-solid fa-share post-action-icon"></i>
+				                    <span class="post-action-text">分享</span>
+				                </div>
+				            </div>
+				            <div class="comment-box">
+				                <input type="text" placeholder="写下你的评论" class="comment-input">
+				                <button class="comment-submit" onclick="submitComment(this)">提交评论</button>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="content-section" id="section4">
+			<div class="header">
+				<h2>联系我们</h2>
+			</div>
+			<div class="profile">
+				<img src="./images/u=3033030059,4193153630&fm=253&fmt=auto&app=120&f=JPEG.webp" alt="头像" class="avatars">
+				<div class="profile-info">
+					<h1>Venette</h1>
+					
+				</div>
+				<div class="thisContectText">
+					<div class="thisSmallContectText" style="margin-left: 130px;">
+						<h1>邮箱</h1>
+						<p>1132530631@QQ.com</p>
+						<img  src="./images/小图片/509cc79a2ce6532c9e7da7c037460717 拷贝.png" alt="" style="width: 100px; height: 100px;"/>
+					</div>
+					<div class="thisSmallContectText">
+						<h1>手机号</h1>
+						<p>15958109687</p>
+						<img src="./images/小图片/a1d1e24027c22bc33fa091e96ec02a9c 拷贝.png" alt="" style="width: 100px; height: 100px;" />
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!-- 可以继续添加其他内容区域 -->
+		</div>
+    </div>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+	<script src="./js/js3.js">
+		 
+	    </script>
+</body>
+
+</html>

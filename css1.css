@@ -1,0 +1,110 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden; 
+        }
+
+        /* 视频背景样式 */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;/**/
+            z-index: -1;
+		}
+
+        /* 内容容器样式 */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-family: '微软雅黑', sans-serif;
+        }
+
+        .text {
+            font-size: 24px;
+            margin-bottom: 20px;
+			margin-top: 50px;
+			font-weight: bolder;	
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid white;
+            border-radius: 25px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+		.userImage {
+		    width: 200px; 
+		    height: 200px; 
+		    object-fit: cover; 
+		    border-radius: 50%; 
+		    margin-bottom: 20px;
+		    transition: transform 0.5s ease; 
+			margin: 0 auto;
+		}
+		.userImage:hover {
+			transform: rotate(360deg); 
+		}
+		@keyframes spin {
+		    from {
+		        transform: rotate(0deg);
+		    }
+		    to {
+		        transform: rotate(360deg);
+		    }
+		}
+		
+		#music-container {
+		    background-image: url(./images/u=3474082761,1373217591&fm=253&fmt=auto&app=138&f=PNG.webp);
+		    background-size: cover;
+		    background-position: center;
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			width: 120px;
+			height: 120px;
+			border-radius: 9999px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+		}
+		
+		.spin {
+		    animation: spin 2s linear infinite;
+		    animation-play-state: running;
+		}
+		
+		.pause-spin {
+		    animation-play-state: paused;
+		}
+		#play-icon{
+			
+			font-family: 'Font Awesome 6 Free';
+			font-weight: 900;
+			color: white;
+			font-size: 2em;
+		}
+		#texts{
+			margin-top: 10px;
+		}

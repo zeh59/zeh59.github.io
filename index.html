@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <title>仿示例网页</title>
+    <link rel="stylesheet" href="./css/css1.css" />
+</head>
+<body>
+    <!-- 视频背景 -->
+    <video id="bgVideo" class="video-bg" autoplay loop muted> <!-- autoplay loop muted：自动播放，循环播放，静音播放 -->
+        <source id="videoSource" src="./images/加载页面背景视频/横版-原神-晨.mp4" type="video/mp4">
+    </video>
+
+    <!-- 内容区域 -->
+    <div class="content">
+		<img class="userImage" src="./images/u=3033030059,4193153630&fm=253&fmt=auto&app=120&f=JPEG.webp" alt="头像">
+        <div class="text">“向着星辰和深渊”</div>
+        <div class="text" id="texts"><span id="typed"></span></div>
+        <a href="加载界面.html"  target="_self" class="button">点击进入</a>  <!-- target="_self"：原网页加载新网页 -->
+    </div>
+	
+	<div id="music-container">
+	    <i id="play-icon" class="fa-solid fa-play "></i>
+	</div>
+	<audio id="music" src="./images/横版-原神-晨 - 副本.mp3" autoplay></audio>
+	<!-- ********************************************************************script -->
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+	<script src="./js/js1.js"></script>
+</body>
